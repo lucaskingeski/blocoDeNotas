@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Aqui, estamos procurando por um item que salvamos com a chave 'minhaNota'.
     const notaSalva = localStorage.getItem('minhaNota');
     const limparNotas= document.getElementById('limparNotas')
+    const salvarBloco=document.getElementById('salvarBloco')
     // Verificamos se encontramos alguma nota salva.
     if (notaSalva) {
         // Se 'notaSalva' não for nulo (ou seja, existe algo salvo),
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.removeItem('minhaNota');
     });
 
-    blocoDeNotas.addEventListener('input', () => {
+    salvarBloco.addEventListener('click', () => {
         // 4. SALVANDO DADOS NO LOCALSTORAGE
         // -----------------------------------
         // Dentro da nossa função de callback, pegamos o valor atual do bloco de notas
